@@ -13,4 +13,5 @@ import java.util.List;
 @Repository
 public interface CompanyRepo extends JpaRepository<Company,Long> {
 
+    List<Company> findByDomain(Domain domain);
 }

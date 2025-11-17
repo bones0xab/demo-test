@@ -47,16 +47,13 @@ public class CompanyImpl implements CompanyInter {
      */
     @Override
     public void deleteCompany(Long id) {
-        // D'abord, vérifier si l'ID existe (approche pro)
         if (!companyRepo.existsById(id)) {
             throw new CompanyNotFoundException("Impossible de supprimer : Entreprise introuvable avec l'ID: " + id);
         }
         companyRepo.deleteById(id);
     }
 
-    /**
-     * Spécification 3: Mettre à jour le prix de l'action
-     */
+
     @Override
     public ResponseCompanyDto updateCompanyPrice(Long id, Double newPrice) {
         // 1. Trouver l'entreprise (ou lever une exception si non trouvée)
