@@ -2,6 +2,7 @@ package org.example.stockservice.service;
 
 import org.example.stockservice.dtos.RequestStockMarketDto;
 import org.example.stockservice.dtos.ResponseStockMarketDto;
+import org.example.stockservice.exception.StockNotFoundException;
 
 import java.util.List;
 
